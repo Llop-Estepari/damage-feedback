@@ -16,3 +16,4 @@ The indicator has different colors for the type of health affected (armor or hea
 3. Add ensure damage_feedback to your server.cfg.
 
 ## Screenshots
+[Video](https://streamable.com/p9p5cw)
