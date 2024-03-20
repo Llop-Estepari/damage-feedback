@@ -5,7 +5,7 @@ The indicator has different colors for the type of health affected (armor or hea
 
 
 ## Configuration
- - Conifugre the colors for the differents hits.
+ - Configure the colors for the differents hits.
  - The life time of the indicator.
  - The relative position (to the shoted player) of the indicator.
  - The message shown when is shot in the head.
