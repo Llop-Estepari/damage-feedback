@@ -35,16 +35,18 @@ local function resetHitmarker()
   acummulatedDmg = 0
   firstShotPos = { x = 0.0, y = 0.0, z = 0.0 }
   hitAmount = ''
-  colorText.a = Config.indicatorOpacity
+  colorText.a = 255
 end
 
 RegisterNetEvent('hitmarker:hit')
-AddEventHandler('hitmarker:hit', function(coords, damage, weaponType, armour)
+AddEventHandler('hitmarker:hit', function(targetId, coords, damage, weaponType, armour)
+  local FoundLastDamagedBone, LastDamagedBone = GetPedLastDamageBone(GetPlayerPed(GetPlayerFromServerId(targetId)))
   if (not enbaled) or (damage == 500) or (weaponType == -728555052 or weaponType == 1548507267 or weaponType == -1609580060) then return end
   coords = { x = coords.x, y = coords.y, z = coords.z + Config.verticalOffset }
   local hasArmour = armour > 0
   local crackArmour = armour - damage <= 0
-  local criticalHit = damage >= Config.minCritic
+  local criticalHit = LastDamagedBone == 31086
+  print(LastDamagedBone)
 
   if lifeTime < Config.desapearTime then
     if criticalHit then
@@ -65,6 +67,7 @@ AddEventHandler('hitmarker:hit', function(coords, damage, weaponType, armour)
       hitAmount = Config.critIndicator
     end
     position = coords
+    print(position.x)
   else
     if lifeTime < Config.acummulateTime then
       if firstShotPos.x == 0 and firstShotPos.y == 0 and firstShotPos.z == 0 then
@@ -75,7 +78,7 @@ AddEventHandler('hitmarker:hit', function(coords, damage, weaponType, armour)
       hitAmount = acummulatedDmg
     else
       hitAmount = damage
-      colorText.a = Config.indicatorOpacity
+      colorText.a = 255
     end
   end
 
