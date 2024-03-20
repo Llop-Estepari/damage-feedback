@@ -17,3 +17,6 @@ The indicator has different colors for the type of health affected (armor or hea
 
 ## Screenshots
 [Video](https://streamable.com/p9p5cw)
+
+## Credits
+A lot of code copy pasted from [here](https://github.com/NIYCCO/niycco_hitmarker).
