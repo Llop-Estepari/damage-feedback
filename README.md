@@ -10,8 +10,8 @@ The indicator has different colors for the type of health affected (armor or hea
  - The relative position (to the shoted player) of the indicator.
 
 ### Installation
-1. Download the entire project or from the release.
+1. Download the entire project or [from the release](https://github.com/Llop-Estepari/damage_feedback/releases).
 2. Place damage_feedback in your resources directory.
-3. Add ensure damage_feedback to your server.cfg
+3. Add ensure damage_feedback to your server.cfg.
 
 ### Screenshots
