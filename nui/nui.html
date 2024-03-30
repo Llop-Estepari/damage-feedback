@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
+  <title>Damage Feedback</title>
+  <style>
+    span {
+      font-family: "Carter One", system-ui;
+      position: absolute;
+      color: white;
+      font-size: 1.4rem;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: black;
+    }
+
+    @keyframes fade-out {
+      0% { opacity: 1; }
+      90% { opacity: 0; }
+      100% {display: none;}
+    }
+  </style>
+</head>
+
+<body>
+  <span id="hitmarker"></span>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
