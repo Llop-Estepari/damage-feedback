@@ -5,7 +5,7 @@ The indicator has different colors for the type of health affected (armor or hea
 
 
 ## Configuration
- - Conifugre the colors for the differents hits.
+ - Configure the colors for the differents hits.
  - The life time of the indicator.
  - The relative position (to the shoted player) of the indicator.
  - The message shown when is shot in the head.
@@ -16,3 +16,7 @@ The indicator has different colors for the type of health affected (armor or hea
 3. Add ensure damage_feedback to your server.cfg.
 
 ## Screenshots
+[Video](https://streamable.com/p9p5cw)
+
+## Credits
+A lot of code copy pasted from [here](https://github.com/NIYCCO/niycco_hitmarker).
