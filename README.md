@@ -1,14 +1,13 @@
 <h1 align="center">Damage Feedback</h1>
 
-A **standalone** script for show the damage done to another player. The damage is displayed in the 3D space and can be acummulative.
-The indicator has different colors for the type of health affected (armor or health) and a different color when the player is shot in the head.
+
+A damage feedback display that shows the damage done to a player when using firearms. Displays the damage dealt to a player in a configurable marker on the screen..
 
 
 ## Configuration
- - Configure the colors for the differents hits.
- - The life time of the indicator.
- - The relative position (to the shoted player) of the indicator.
- - The message shown when is shot in the head.
+ - Indicator style.
+ - Indicator life time.
+ - Indicator message shown when is shot in the head.
 
 ## Installation
 1. Download the entire project or [from the release](https://github.com/Llop-Estepari/damage_feedback/releases).

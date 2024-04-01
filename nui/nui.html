@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
@@ -9,15 +8,12 @@
     span {
       font-family: "Carter One", system-ui;
       position: absolute;
-      color: white;
-      font-size: 1.4rem;
-      -webkit-text-stroke-width: 1px;
-      -webkit-text-stroke-color: black;
+      padding-left: 10px;
+      text-align: end;
     }
-
     @keyframes fade-out {
-      0% { opacity: 1; }
-      90% { opacity: 0; }
+      0% { opacity: 1; color: #ff2d2d; scale: 1.4;}
+      90% { opacity: 0; color: rgba(255, 255, 255, 0); scale: 0.1;}
       100% {display: none;}
     }
   </style>
@@ -27,5 +23,4 @@
   <span id="hitmarker"></span>
   <script type="text/javascript" src="script.js"></script>
 </body>
-
 </html>
