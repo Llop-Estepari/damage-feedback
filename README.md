@@ -1,7 +1,7 @@
 <h1 align="center">Damage Feedback</h1>
 
 
-A damage feedback display that shows the damage done to a player when using firearms. Displays the damage dealt to a player in a configurable marker on the screen..
+A damage feedback display that shows the damage done to a player when using firearms. Displays the damage dealt to a player in a configurable marker on the screen.
 
 
 ## Configuration
