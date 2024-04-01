@@ -2,7 +2,6 @@ local enabled = true
 local hitmarkerIds = 0
 local dmgDone = 0
 local drawTime = 0
-local acummulateTime = 30 --The time used to accumulate the damage.
 
 local function loadSettings()
   SendNUIMessage({
@@ -22,7 +21,7 @@ AddEventHandler('hitmarker:hit', function(targetId, coords, damage, weaponType, 
   --If is disabled, or the damage is 500(the damage done by hitting mele with a gun), or the weapon is not allowed, return.
   if (not enabled) or (damage == 500) or (weaponType == -728555052 or weaponType == 1548507267 or weaponType == -1609580060) then return end
   coords = { x = coords.x, y = coords.y, z = coords.z}
-  if (drawTime < acummulateTime) then
+  if (drawTime < Config.acummulateTime) then
     dmgDone += damage
   else
     dmgDone = damage

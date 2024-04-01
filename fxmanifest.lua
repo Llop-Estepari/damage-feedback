@@ -16,3 +16,7 @@ ui_page 'nui/nui.html'
 files {
   'nui/*',
 }
+
+escrow_ignore {
+  'config.lua',  -- Only ignore one file
+}
