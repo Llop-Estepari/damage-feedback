@@ -31,7 +31,7 @@ AddEventHandler('hitmarker:hit', function(targetId, coords, damage, weaponType, 
   drawTime = 0
   hitmarkerIds += 1
 
-  local id = hitmarkerIds --Asign an id for the damage applied.
+  local id = hitmarkerIds --Asign an id for the damage event.
   local resetMarker = false --If true reset the indicator transform.
 
   while (drawTime <= Config.markerTimer) and (id == hitmarkerIds) do

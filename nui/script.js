@@ -4,14 +4,15 @@ var movement = null;
 let lastDamage = 0;
 let xPos = 0;
 let yPos = 0;
-let indicatorTime = 0;
+let indicatorTime = '1s';
 
 function loadSettings(data){
   hitmarker.style.color = data.color;
   hitmarker.style.webkitTextStrokeColor = data.outlineColor;
   hitmarker.style.webkitTextStrokeWidth = data.outlineWidth + 'px';
   hitmarker.style.fontSize = data.fontSize + 'px';
-  indicatorTime = data.indicatorLifetime + 5;
+  hitmarker.style.fontFamily = data.font;
+  indicatorTime = (data.indicatorLifetime + 20) / 100 + 's';
 }
 
 function move(){
@@ -22,7 +23,7 @@ function move(){
 function resetAnimation(){
   hitmarker.style.animation = 'none';
   setTimeout(function() {
-    const anim = 'fade-out ' + indicatorTime + 's ease';
+    const anim = 'fade-out ' + indicatorTime + ' ease-in-out';
     hitmarker.style.animation = anim;
 }, 10);
 }
@@ -37,10 +38,6 @@ function hitmarkerData(data) {
   }
   xPos = (data.x * 100);
   yPos = (data.y * 100);
-  // if (data.distance > 18) {
-  // } else {
-  //   yPos = (data.y * 100) + (20 - data.distance);
-  // }
 
   clearInterval(movement);
   movement = setInterval(updateMovement, 1);
@@ -60,7 +57,7 @@ window.addEventListener('message', function (event) {
   } else if (event.data.type === 'DELETE') {
     hitmarker.style.display = 'none';
   } else if (event.data.type === 'SETTINGS') {
-    console.log('Settings loaded!');
+    //console.log('Settings loaded!');
     loadSettings(event.data);
   }
 })

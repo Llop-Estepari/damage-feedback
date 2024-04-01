@@ -7,7 +7,6 @@ A damage feedback display that shows the damage done to a player when using fire
 ## Configuration
  - Indicator style.
  - Indicator life time.
- - Indicator message shown when is shot in the head.
 
 ## Installation
 1. Download the entire project or [from the release](https://github.com/Llop-Estepari/damage_feedback/releases).
