@@ -61,3 +61,7 @@ window.addEventListener('message', function (event) {
     loadSettings(event.data);
   }
 })
+
+$(document).ready(function() {
+  $.post('https://damage_feedback/loadsettings');
+});

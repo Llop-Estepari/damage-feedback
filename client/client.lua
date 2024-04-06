@@ -3,23 +3,24 @@ local hitmarkerIds = 0
 local dmgDone = 0
 local drawTime = 0
 
-local function loadSettings()
+RegisterNUICallback('loadsettings', function()
   SendNUIMessage({
     type = 'SETTINGS',
-    color, Config.hitmarkerColor,
+    color = Config.hitmarkerColor,
     outlineWidth = Config.hitmarkerOutlineWidth,
     outlineColor = Config.hitmarkerOutlineColor,
     font = Config.hitmarkerFont,
     fontSize = Config.hitmarkerFontSize,
     indicatorLifetime = Config.markerTimer,
   })
-end
+end)
 
 RegisterNetEvent('hitmarker:hit')
 AddEventHandler('hitmarker:hit', function(targetId, coords, damage, weaponType, armour)
-  --local FoundLastDamagedBone, LastDamagedBone = GetPedLastDamageBone(GetPlayerPed(GetPlayerFromServerId(targetId)))
-  --If is disabled, or the damage is 500(the damage done by hitting mele with a gun), or the weapon is not allowed, return.
-  if (not enabled) or (damage == 500) or (weaponType == -728555052 or weaponType == 1548507267 or weaponType == -1609580060) then return end
+  local hideSelfDmg = GetPlayerPed(GetPlayerFromServerId(targetId)) == PlayerPedId()
+  local weaponGroup = GetWeapontypeGroup(weaponType)
+
+  if (not enabled) or (hideSelfDmg) or (damage == 500) or (weaponGroup == -728555052 or weaponGroup == 1548507267 or weaponGroup == -1609580060) then return end
   coords = { x = coords.x, y = coords.y, z = coords.z}
   if (drawTime < Config.acummulateTime) then
     dmgDone += damage
@@ -57,8 +58,3 @@ end)
 RegisterCommand('damage', function(source, args, rawCommand)
   enabled = not enabled
 end, false)
-
-CreateThread(function()
-  Wait(100)
-  loadSettings()
-end)
