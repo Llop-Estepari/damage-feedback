@@ -9,11 +9,11 @@ A damage feedback display that shows the damage done to a player when using fire
  - Indicator life time.
 
 ## Installation
-1. Place damage_feedback in your resources directory.
-2. Add ensure damage_feedback to your server.cfg.
+1. Place damage_indicator in your resources directory.
+2. Add ensure damage_indicator to your server.cfg.
 
 ## Screenshots
-[Video](https://streamable.com/p9p5cw)
+[Video](https://youtu.be/NQQ9uQMj03E)
 
 ## Credits
 A lot of code copy pasted from [here](https://github.com/NIYCCO/niycco_hitmarker).
