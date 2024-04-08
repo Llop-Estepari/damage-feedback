@@ -2,7 +2,7 @@ fx_version 'cerulean'
 game 'gta5'
 lua54 'true'
 
-name 'damage_feedback'
+name 'damage_indicator'
 author 'llop'
 description 'A damage feedback display that shows the damage done to a player when using firearms. Displays the damage dealt to a player in a configurable marker on the screen.'
 version '1.1.0'
