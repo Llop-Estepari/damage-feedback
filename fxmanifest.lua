@@ -5,7 +5,7 @@ lua54 'true'
 name 'damage_indicator'
 author 'llop'
 description 'A damage feedback display that shows the damage done to a player when using firearms. Displays the damage dealt to a player in a configurable marker on the screen.'
-version '1.1.0'
+version '1.2.0'
 
 client_scripts { 'client/client.lua', }
 server_scripts { 'server/server.lua', }
@@ -18,5 +18,7 @@ files {
 }
 
 escrow_ignore {
-  'config.lua',  -- Only ignore one file
+  'config.lua',
+  'client/client.lua',
+  'server/server.lua',
 }

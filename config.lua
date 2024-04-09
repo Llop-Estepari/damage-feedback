@@ -5,7 +5,7 @@ Config = {
   hitmarkerOutlineWidth = 1,        --Indicator outline size in pixels
   hitmarkerOutlineColor = '#000',   --The hex color of the outline
   hitmarkerFontSize = 22.4,         --Font size of the indicator
-  hitmarkerFont = 'Anton',     --The font to use for the indicator.
+  hitmarkerFont = 'Anton',          --The font to use for the indicator.
 }
 --FONTS
 --'Carter One'
