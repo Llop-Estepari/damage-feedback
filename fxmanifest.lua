@@ -3,7 +3,7 @@ game 'gta5'
 lua54 'true'
 
 name 'damage_indicator'
-author 'llop'
+author 'Llop'
 description 'A damage feedback display that shows the damage done to a player when using firearms. Displays the damage dealt to a player in a configurable marker on the screen.'
 version '1.2.0'
 
@@ -15,10 +15,4 @@ ui_page 'nui/nui.html'
 
 files {
   'nui/*',
-}
-
-escrow_ignore {
-  'config.lua',
-  'client/client.lua',
-  'server/server.lua',
 }
