@@ -17,11 +17,11 @@ end)
 
 RegisterNetEvent('hitmarker:hit')
 AddEventHandler('hitmarker:hit', function(targetId, coords, damage, weaponType, armour)
+  coords = GetWorldPositionOfEntityBone(GetPlayerPed(GetPlayerFromServerId(targetId)), GetPedBoneIndex(PlayerPedId(), 31086))
   local hideSelfDmg = GetPlayerPed(GetPlayerFromServerId(targetId)) == PlayerPedId()
   local weaponGroup = GetWeapontypeGroup(weaponType)
 
   if (not enabled) or (hideSelfDmg) or (damage == 500) or (weaponGroup == -728555052 or weaponGroup == 1548507267 or weaponGroup == -1609580060) then return end
-  coords = { x = coords.x, y = coords.y, z = coords.z}
   if (drawTime < Config.acummulateTime) then
     dmgDone += damage
   else
@@ -37,7 +37,7 @@ AddEventHandler('hitmarker:hit', function(targetId, coords, damage, weaponType, 
   while (drawTime <= Config.markerTimer) and (id == hitmarkerIds) do
     resetMarker = drawTime == 0
 
-    local onScreen, _x, _y = GetScreenCoordFromWorldCoord(coords.x, coords.y, coords.z)
+    local onScreen, _x, _y = GetScreenCoordFromWorldCoord(coords.x, coords.y, coords.z + .5)
     SendNUIMessage({
       type = 'HITDATA',
       x = _x,

@@ -63,5 +63,5 @@ window.addEventListener('message', function (event) {
 })
 
 $(document).ready(function() {
-  $.post('https://damage_feedback/loadsettings');
+  $.post('https://damage_indicator/loadsettings');
 });
