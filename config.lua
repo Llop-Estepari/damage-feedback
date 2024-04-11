@@ -1,5 +1,5 @@
 Config = {
-  markerTimer = 90,                 --The time the indicator will be displayed. ()
+  markerTimer = 90,                 --The time the indicator will be displayed.
   acummulateTime = 60,              --The time used to accumulate the damage.
   hitmarkerColor = '#fff',       --The hex color of the indicator
   hitmarkerOutlineWidth = 1,        --Indicator outline size in pixels
